@@ -1,0 +1,6 @@
+@import url("../font/IRANSans/css/fontiran.css");
+@import url("../style/normalize.css");
+
+body {
+  font-family: "IRANSans";
+}
