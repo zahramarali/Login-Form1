@@ -1,6 +1,252 @@
 @import url("../font/IRANSans/css/fontiran.css");
 @import url("../style/normalize.css");
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: "IRANSans";
+  width: 100%;
+  height: 100vh;
+  background-color: lightgray;
+  background-image: url("../public/dc5c767e562f584b2fe93a0d30b294d9\ 1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-clip: padding-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-page .signup-box {
+  width: 84.375rem;
+  height: 50rem;
+  flex-shrink: 0;
+  border-radius: 50px;
+  border: 10px solid #fff;
+  background: rgba(255, 255, 255, 0.6);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.signup-page .signup-box .signup-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4.44rem 4.19rem 3.31rem 6.31rem;
+  position: relative;
+}
+
+.signup-page .signup-box .signup-info::before {
+  content: "";
+  position: absolute;
+  width: 5.83581rem;
+  height: 5.20594rem;
+  flex-shrink: 0;
+  background-image: url("../public/Ellipse\ 4.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 2.1rem;
+  left: -1.3rem;
+  cursor: pointer;
+}
+
+.signup-page .signup-box .signup-info::after {
+  content: "ورود";
+  position: absolute;
+  top: 3.9rem;
+  left: 1rem;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.signup-page .signup-box .signup-info .signup-info-heading {
+  color: #000;
+  text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-size: 2.5rem;
+  margin-bottom: 1.06rem;
+}
+
+.signup-page .signup-box .signup-info .word {
+  color: #000;
+  opacity: 0.6000000238418579;
+  font-size: 0.975rem;
+}
+
+.signup-page .signup-box .signup-info form input {
+  width: 29.875rem;
+  height: 4.0625rem;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #887e7e;
+  background: #fff;
+  margin-top: 2.44rem;
+  padding-right: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  border: none;
+  outline: none;
+}
+
+.signup-page .signup-box .signup-info form input::placeholder {
+  color: rgba(99, 92, 92, 0.8);
+  font-size: 1.2625rem;
+  font-weight: 500;
+}
+
+.signup-page .signup-box .signup-info form .name {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.signup-page .signup-box .signup-info form .name > input {
+  width: 13.4375rem;
+  height: 3.75rem;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #887e7e;
+  background: #fff;
+  margin-top: 2.44rem;
+  margin-left: 2.88rem;
+  border: none;
+  outline: none;
+}
+
+.signup-page .signup-box .signup-info form .name .firstName::placeholder,
+.signup-page .signup-box .signup-info form .name .lastName::placeholder {
+  color: #000;
+  font-size: 1.2625rem;
+  font-weight: 500;
+  opacity: 0.550000011920929;
+}
+
+.signup-page .signup-box .signup-info form button {
+  width: 29.8125rem;
+  height: 4.375rem;
+  flex-shrink: 0;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: #0b6efe;
+  color: #fff;
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-top: 3.19rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.signup-page .signup-box .signup-info .login-link {
+  margin-top: 1.06rem;
+  text-decoration: none;
+  color: #555252;
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.signup-page .signup-box .signup-info .social-links {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-right: -5rem;
+}
+
+/* .signup-page .signup-box .signup-info .social-links .apple,
+.signup-page .signup-box .signup-info .social-links .facebook {
+  width: 4.3125rem;
+  height: 4.125rem;
+  flex-shrink: 0;
+  margin: 3rem 0.455rem;
+} */
+
+.signup-page .signup-box .signup-info .social-links .apple,
+.signup-page .signup-box .signup-info .social-links .facebook {
+  /* .signup-page .signup-box .signup-info .social-links .google-Link .google { */
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50rem;
+  border: 0.4px solid #f89aee;
+  background: #ece9ec;
+  margin: 3rem 0.455rem;
+}
+
+.signup-page .signup-box .signup-info .social-links .apple-link::before {
+  content: "";
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50rem;
+  border: 0.4px solid #f89aee;
+  background: #ece9ec;
+  background-image: url("../public/Group\ 4.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120%;
+  top: 3rem;
+  left: 16rem;
+  z-index: 10;
+}
+
+.signup-page .signup-box .signup-info .social-links .facebook-link::before {
+  content: "";
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50rem;
+  border: 0.4px solid #f89aee;
+  background: #ece9ec;
+  background-image: url("../public/Group\ 5.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 120%;
+  top: 3rem;
+  left: 11rem;
+  z-index: 10;
+}
+
+.signup-page .signup-box .signup-info .social-links .google-Link::before {
+  content: "";
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50rem;
+  border: 0.4px solid #f89aee;
+  background: #ece9ec;
+  background-image: url("../public/Google\ logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  top: 3rem;
+  left: 6rem;
+  z-index: 10;
+}
+
+.signup-page .signup-box .signup-img {
+  z-index: 1;
+}
+
+.signup-page .signup-box .signup-img img {
+  display: block;
+  width: 42.75rem;
+  height: 47.5625rem;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 40px;
+  border: 1px solid #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
