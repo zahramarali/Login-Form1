@@ -7,6 +7,10 @@ html {
 
 body {
   font-family: "IRANSans";
+  height: 100%;
+}
+
+.signup-page {
   width: 100%;
   height: 100vh;
   background-color: lightgray;
@@ -21,7 +25,7 @@ body {
 }
 
 .signup-page .signup-box {
-  width: 84.375rem;
+  max-width: 84.375rem;
   height: 50rem;
   flex-shrink: 0;
   border-radius: 50px;
@@ -30,7 +34,10 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 .signup-page .signup-box .signup-info {
@@ -40,32 +47,6 @@ body {
   align-items: center;
   padding: 4.44rem 4.19rem 3.31rem 6.31rem;
   position: relative;
-}
-
-.signup-page .signup-box .signup-info::before {
-  content: "";
-  position: absolute;
-  width: 5.83581rem;
-  height: 5.20594rem;
-  flex-shrink: 0;
-  background-image: url("../public/Ellipse\ 4.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  top: 2.1rem;
-  left: -1.3rem;
-  cursor: pointer;
-}
-
-.signup-page .signup-box .signup-info::after {
-  content: "ورود";
-  position: absolute;
-  top: 3.9rem;
-  left: 1rem;
-  color: #fff;
-  font-size: 1.25rem;
-  font-weight: 500;
-  cursor: pointer;
 }
 
 .signup-page .signup-box .signup-info .signup-info-heading {
@@ -79,6 +60,14 @@ body {
   color: #000;
   opacity: 0.6000000238418579;
   font-size: 0.975rem;
+}
+
+.signup-page .signup-box .signup-info form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .signup-page .signup-box .signup-info form input {
@@ -108,6 +97,7 @@ body {
   flex-direction: row;
   justify-content: start;
   align-items: center;
+  margin-right: 3rem;
 }
 
 .signup-page .signup-box .signup-info form .name > input {
@@ -154,6 +144,30 @@ body {
   color: #555252;
   font-size: 0.9375rem;
   font-weight: 500;
+  text-align: center;
+  position: relative;
+}
+
+.signup-page .signup-box .signup-info .login-link::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: 8.5rem;
+  width: 11.9375rem;
+  height: 0.25rem;
+  flex-shrink: 0;
+  background: linear-gradient(132deg, #0b6efe 0%, rgba(196, 196, 196, 0) 100%);
+}
+
+.signup-page .signup-box .signup-info .login-link::after {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: -12.5rem;
+  width: 11.9375rem;
+  height: 0.25rem;
+  flex-shrink: 0;
+  background: linear-gradient(228deg, #0b6efe 0%, rgba(196, 196, 196, 0) 100%);
 }
 
 .signup-page .signup-box .signup-info .social-links {
@@ -163,25 +177,16 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-right: -5rem;
+  /* margin: 0 auto; */
 }
-
-/* .signup-page .signup-box .signup-info .social-links .apple,
-.signup-page .signup-box .signup-info .social-links .facebook {
-  width: 4.3125rem;
-  height: 4.125rem;
-  flex-shrink: 0;
-  margin: 3rem 0.455rem;
-} */
 
 .signup-page .signup-box .signup-info .social-links .apple,
 .signup-page .signup-box .signup-info .social-links .facebook {
-  /* .signup-page .signup-box .signup-info .social-links .google-Link .google { */
   width: 4rem;
   height: 4rem;
   border-radius: 50rem;
-  border: 0.4px solid #f89aee;
-  background: #ece9ec;
+  /* border: 0.4px solid #f89aee; */
+  background: transparent;
   margin: 3rem 0.455rem;
 }
 
@@ -237,16 +242,48 @@ body {
 }
 
 .signup-page .signup-box .signup-img {
-  z-index: 1;
+  display: flex;
+  width: 38rem;
+  height: 48rem;
+  flex-shrink: 0;
+  border-radius: 40px;
+  border: 1px solid #fff;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.signup-page .signup-box .signup-img::before {
+  content: "";
+  position: absolute;
+  width: 5.83581rem;
+  height: 5.20594rem;
+  flex-shrink: 0;
+  background-image: url("../public/Ellipse\ 4.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 2.1rem;
+  left: 37rem;
+  cursor: pointer;
+}
+
+.signup-page .signup-box .signup-img::after {
+  content: "ورود";
+  position: absolute;
+  top: 3.9rem;
+  left: 39rem;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .signup-page .signup-box .signup-img img {
   display: block;
-  width: 42.75rem;
-  height: 47.5625rem;
-  max-width: 100%;
-  max-height: 100%;
+  object-fit: contain;
   border-radius: 40px;
   border: 1px solid #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  object-fit: contain;
+  z-index: 1;
 }
